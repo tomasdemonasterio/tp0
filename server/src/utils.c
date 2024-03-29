@@ -13,7 +13,7 @@ int iniciar_servidor(void)
 	hints.ai_socktype = SOCK_STREAM;
 	hints.ai_flags = AI_PASSIVE;
 
-	getaddrinfo("127.0.0.1", "4444", &hints, &servinfo);
+	getaddrinfo("192.168.1.36", "4444", &hints, &servinfo);
 
 	// Creamos el socket de escucha del servidor
     socket_servidor = socket(servinfo->ai_family,
